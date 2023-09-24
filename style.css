@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+nav {
+  position: relative;
+  z-index: 100;
+}
+
+.span-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.span-elements span {
+  width: 100%;
+  height: 2px;
+  background-color: #c50f0f;
+  transition: transform 0.5s;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30vw;
+  background-color: rgba(0, 0, 0);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100rem);
+  transition: all 0.5s;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+.active {
+  transform: translateX(0rem);
+}
+
+h1 {
+  font-family: "poppins", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 500px) {
+  .menu {
+    width: 100vw;
+  }
+}
+
+.toggle.span-1 {
+  transform: translateY(300%) rotateZ(-45deg);
+}
+
+.toggle.span-2 {
+  opacity: 0;
+}
+
+.toggle.span-3 {
+  transform: translateY(-300%) rotateZ(45deg);
+}
